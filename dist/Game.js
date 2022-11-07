@@ -17,7 +17,7 @@ export function Game(image) {
         const clicker = new Image();
         const { clientHeight, clientWidth } = document.getElementById("img");
         container.className = "clicker";
-        clicker.src = "/images/clicker.gif";
+        clicker.src = "./images/clicker.gif";
         container.appendChild(clicker);
         container.style.left = window.innerWidth / 2 - (clientWidth + 50) / 2 + "px";
         container.style.top = window.innerHeight / 2 - (clientHeight + 50) / 2 + "px";
