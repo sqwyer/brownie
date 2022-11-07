@@ -12,7 +12,7 @@ import { render } from "./render.js";
 const presets = [
     {
         name: "Cosmic Brownie",
-        url: "/images/cosmic_brownie.png"
+        url: "./images/cosmic_brownie.png"
     }
 ];
 export function Create() {
