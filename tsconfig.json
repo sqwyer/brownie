@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "sourceRoot": "src",
+        "sourceMap": true,
+        "target": "ES2016",
+        "outDir": "dist",
+        "moduleResolution": "nodenext",
+    }
+}
