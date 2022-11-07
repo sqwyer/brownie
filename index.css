@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -5,7 +7,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     background: #000;
     color: #fff;
     overflow: hidden;
@@ -24,10 +26,88 @@ body {
     gap: 1rem;
 }
 
+#show-presets {
+    color: #00ffff60;
+    font-weight: 500;
+    text-align: center;
+    display: block;
+    font-size: .9rem;
+    cursor: pointer;
+    transition: 0.2s ease-out color;
+}
+
+#show-presets:hover {
+    color: #00ffff80;
+}
+
+#presets-popover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    padding: 1rem 0;
+    background: #ffffff08;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.presets-popver-preset:first-child {
+    border-top: 2.5px solid #ffffff10;
+}
+
+.presets-popver-preset {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    padding: 1rem 2rem;
+    border-bottom: 2.5px solid #ffffff10;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.presets-popver-preset img {
+    max-height: 50px;
+}
+
+.presets-popver-preset div {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
+    justify-content: flex-start;
+} 
+
+.presets-popver-preset:hover {
+    background: #ffffff09;
+}
+
+#preset-exit {
+    color: #777;
+    margin: 0 auto;
+    display: inline;
+    transition: 0.2s ease color;
+    font-size: .9rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#preset-exit:hover {
+    color: #999;
+}
+
+#preset-url {
+    color: #999;
+}
+
 #src-wrapper {
 	position: relative;
 	width: 100%;
 }
+
 #src-wrapper #src-input {
 	width: 100%;
 	outline: none;
@@ -40,7 +120,7 @@ body {
     border-width: medium medium 2px;
 }
 #src-wrapper #src-input:focus{
-	border-color: #00ffff20;
+	border-color: #00ffff80;
 }
 #src-wrapper #src-label {
     /* padding: .5rem 1rem; */
@@ -58,7 +138,7 @@ body {
 	left: 16px;
 	font-size: .6rem;
 	opacity: 1;
-    color: #00ffff20;
+    color: #00ffff80;
 }
 
 #src-wrapper.invalid-url #src-input:focus {
@@ -75,8 +155,8 @@ body {
     padding: .5rem 1rem;
     border: none;
     border-radius: 8px;
-    background: #00ffff10;
-    border: 1.5px solid #00ffff10;
+    background: #00ffff50;
+    border: 1.5px solid #00ffff50;
     transition: 0.2s;
     cursor: pointer;
 }
